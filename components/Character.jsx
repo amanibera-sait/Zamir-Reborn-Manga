@@ -1,3 +1,8 @@
+//TODO
+// - Add more character attributes (ex. likes, dislikes, hobbies, relations).
+// - Add sorting feature (ex. main cast, side cast, antagonist OR Gelio town, Eldora town, Pyranis city).
+
+
 
 "use client";
 

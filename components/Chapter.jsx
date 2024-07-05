@@ -1,3 +1,6 @@
+//TODO
+// - Add Icon images to folder.
+
 import Link from "next/link";
 
 export default function Chapter({chapter, title, icon, releaseDate, files, likes}){  

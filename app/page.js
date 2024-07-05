@@ -1,3 +1,8 @@
+//TODO
+// - Build footer component with social links.
+// - Add user system and login feature.
+
+
 import Heading from "@/components/Header";
 
 export default function Home() {

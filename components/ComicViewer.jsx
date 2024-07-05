@@ -1,3 +1,10 @@
+//TODO
+// - Impliment a previous page function.
+// - Impliment a side bar of the chapters.
+// - Add Tailwind Styling.
+// - Impliment commenting system.
+
+
 "use client";
 
 import { useState, useEffect } from "react"
