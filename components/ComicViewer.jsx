@@ -9,8 +9,19 @@
 
 import { useState, useEffect } from "react"
 import storyJSON from '@/components/zamir-reborn-info.json'
+import Image from "next/image";
 
 export default function ComicViewer({volumeNum, chapterNum}) {
+  const [isFirstLastPage, setFirstLastPage] = useState(true);
+  
+  const [firstIndex, setFirstIndex] = useState(0);
+  const [secondIndex, setSecondIndex] = useState(2);
+  
+  const [firstPage, setFirstPage] = useState(chapter[firstIndex]);
+  const [secondPage, setSecondPage] = useState(chapter[secondIndex]);
+  
+  const pageImgPath_1 = `${chapterFolder}/${firstPage}`
+  const pageImgPath_2 = `${chapterFolder}/${secondPage}`
   
   console.log("volumeNum:", volumeNum);
   console.log("chapterNum:", chapterNum);
@@ -42,27 +53,7 @@ export default function ComicViewer({volumeNum, chapterNum}) {
   console.log("Chapters:", chapter);
   
   const chapterFolder = `/images/chapters/Chapter_${chapterNum}`;
-
   
-  
-  const [isFirstLastPage, setFirstLastPage] = useState(true);
-  
-  const [firstIndex, setFirstIndex] = useState(0);
-  const [secondIndex, setSecondIndex] = useState(2);
-  
-  const [firstPage, setFirstPage] = useState(chapter[firstIndex]);
-  const [secondPage, setSecondPage] = useState(chapter[secondIndex]);
-  
-  const pageImgPath_1 = `${chapterFolder}/${firstPage}`
-  const pageImgPath_2 = `${chapterFolder}/${secondPage}`
-  
-  useEffect(() => {
-    // Preload all images
-    chapter.forEach(page => {
-      const img = new Image();
-      img.src = `${chapterFolder}/${page}`;
-    });
-  }, [chapter, chapterFolder]);
   
   function handleNext(){
     if (isFirstLastPage == true && firstIndex + 2 < chapter.length){
@@ -108,13 +99,13 @@ export default function ComicViewer({volumeNum, chapterNum}) {
       <div className="flex flex-row-reverse justify-center content-center m-2">
         {isFirstLastPage && (
           <>
-            <img src={pageImgPath_1} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + firstPage}/>
+            <Image src={pageImgPath_1} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + firstPage}/>
           </>
         )}
         {!isFirstLastPage && (
           <>
-            <img src={pageImgPath_1} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + firstPage}/>
-            <img src={pageImgPath_2} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + secondPage}/>
+            <Image src={pageImgPath_1} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + firstPage}/>
+            <Image src={pageImgPath_2} width={350} height={350} className="my-2 size-1/4" alt={"Image of " + secondPage}/>
           </>
         )}
       </div>
