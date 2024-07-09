@@ -43,6 +43,19 @@ export default function ComicViewer({volumeNum, chapterNum}) {
   
   const chapterFolder = `/images/chapters/Chapter_${chapterNum}`;
 
+  
+  
+  const [isFirstLastPage, setFirstLastPage] = useState(true);
+  
+  const [firstIndex, setFirstIndex] = useState(0);
+  const [secondIndex, setSecondIndex] = useState(2);
+  
+  const [firstPage, setFirstPage] = useState(chapter[firstIndex]);
+  const [secondPage, setSecondPage] = useState(chapter[secondIndex]);
+  
+  const pageImgPath_1 = `${chapterFolder}/${firstPage}`
+  const pageImgPath_2 = `${chapterFolder}/${secondPage}`
+  
   useEffect(() => {
     // Preload all images
     chapter.forEach(page => {
@@ -50,19 +63,7 @@ export default function ComicViewer({volumeNum, chapterNum}) {
       img.src = `${chapterFolder}/${page}`;
     });
   }, [chapter, chapterFolder]);
-
-
-  const [isFirstLastPage, setFirstLastPage] = useState(true);
-
-  const [firstIndex, setFirstIndex] = useState(0);
-  const [secondIndex, setSecondIndex] = useState(2);
   
-  const [firstPage, setFirstPage] = useState(chapter[firstIndex]);
-  const [secondPage, setSecondPage] = useState(chapter[secondIndex]);
-
-  const pageImgPath_1 = `${chapterFolder}/${firstPage}`
-  const pageImgPath_2 = `${chapterFolder}/${secondPage}`
-
   function handleNext(){
     if (isFirstLastPage == true && firstIndex + 2 < chapter.length){
       setFirstLastPage(false)
