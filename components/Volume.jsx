@@ -9,7 +9,7 @@ export default function Volume({volumeNum}) {
     const volumeIndex = volumeNum - 1;
     console.log("Volume Index:",volumeIndex)
     const volume = storyJSON.volumes[volumeIndex]
-    console.log("Volumes:", volume)
+    //console.log("Volumes:", volume)
     if (!volume) {
         console.error(`Volume ${volumeIndex} not found in story JSON.`);
         return null;

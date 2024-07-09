@@ -1,10 +1,10 @@
 {
-  "name": "my-practice-app",
+  "name": "majudu-comics",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "[my-framework] build --output public",
     "start": "next start",
     "lint": "next lint"
   },
