@@ -2,8 +2,6 @@
 
 import Heading from "@/components/layout-components/Header";
 import Volume from "@/components/manga-components/Volume";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Page() {
 

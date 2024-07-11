@@ -2,8 +2,7 @@
 "use client"
 
 import ChapterList from "./ChapterList"
-import Link from "next/link";
-import storyJSON from "./zamir-reborn-info.json"
+import storyJSON from "@/components/json-data/zamir-reborn-info.json"
 
 export default function Volume({volumeNum}) {
 

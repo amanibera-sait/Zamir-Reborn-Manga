@@ -8,7 +8,7 @@
 "use client";
 
 import { useState, useEffect } from "react"
-import storyJSON from '@/components/zamir-reborn-info.json'
+import storyJSON from '@/components/json-data/zamir-reborn-info.json'
 import Image from "next/image";
 
 

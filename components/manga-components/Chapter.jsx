@@ -3,17 +3,8 @@
 "use client"
 
 import Link from "next/link";
-import { useState } from "react";
 
 const Chapter = ({chapter, volume, title, icon, releaseDate, files, likes}) => {  
-    const [selectedChapter, setSelectedChapter] = useState(null)
-    
-    console.log("Chapter:", chapter);
-    
-    function handleClick(){
-        setSelectedChapter(chapter);
-    }
-
     return (
         <>
             <li className="flex justify-center items-start p-2 space-x-10 w-full max-w-screen-md mx-auto my-5 bg-slate-300 rounded-lg">

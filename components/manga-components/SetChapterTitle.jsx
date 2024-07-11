@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import storyJSON from '@/components/zamir-reborn-info.json';
+import storyJSON from '@/components/json-data/zamir-reborn-info.json';
 
 const SetChapterTitle = () => {
   const searchParams = useSearchParams();

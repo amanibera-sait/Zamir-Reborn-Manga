@@ -1,5 +1,5 @@
 import Volume from "./Volume"
-import storyJSON from "./zamir-reborn-info.json"
+import storyJSON from "@/components/json-data/zamir-reborn-info.json"
 
 
 export default function VolumeList(){

@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import BannerCarousel from './BannerCarousel'
-import ZamirRebornJSON from './zamir-reborn-info.json'
+import ZamirRebornJSON from '@/components/json-data/zamir-reborn-info.json'
 import Link from 'next/link'
 
 function HomePage() {
