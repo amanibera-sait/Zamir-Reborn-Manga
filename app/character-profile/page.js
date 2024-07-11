@@ -4,12 +4,10 @@ import Heading from "@/components/layout-components/Header";
 export default function Page(){
     return(
         <>
-            <div className="bg-blue-800 min-h-screen flex justify-center">
-                <main className="bg-white w-full max-w-7xl">
-                    <Heading/>
-                    <ChatracterList/>
-                </main>
-            </div>
+            <main className="bg-white w-full min-h-screen justify-center items-center">
+                <Heading/>
+                <ChatracterList/>
+            </main>
         </>
     );
 }
