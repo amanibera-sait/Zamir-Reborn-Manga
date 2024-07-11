@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import ComicViewer from '@/components/reader-components/ComicViewer';
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense  } from 'react';
 import storyJSON from '@/components/json-data/zamir-reborn-info.json'
 
 const Viewer = () => {
@@ -20,16 +20,13 @@ const Viewer = () => {
     function fetchComicData(volume, chapter) {
         const data = storyJSON.volumes[volume - 1].chapters[chapter - 1].pages;
         console.log(`Data: ${data}}`);
-    
-        if (!volume || !chapter) {
-            return <p>Loading...</p>;
-        }
     }
 
     return (
         <div>
-            <h1>Chapter Viewer</h1>
-            <ComicViewer volume={volume} chapter={chapter} />
+            <Suspense fallback={<p className='flex justify-center items-center text-lg font bold'>Loading...</p>}>
+                <ComicViewer volume={volume} chapter={chapter} />
+            </Suspense>
         </div>
     );
 };
