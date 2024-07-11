@@ -11,20 +11,25 @@ import { useState, useEffect } from "react"
 import storyJSON from '@/components/zamir-reborn-info.json'
 import Image from "next/image";
 
-export default function ComicViewer({volumeNum, chapterNum}) {
+
+export default function ComicViewer ({volume, chapter}) {
+  const chapterFolder = `/images/chapters/Chapter_${chapter}`;
+  const volumeIndex = volume - 1;
+  const validVolume = storyJSON.volumes[volumeIndex];
+  const chapterSource = validVolume.chapters;
+  const chapterPages= chapterSource[chapter - 1].files;
+  
   const [isFirstLastPage, setFirstLastPage] = useState(true);
   
   const [firstIndex, setFirstIndex] = useState(0);
   const [secondIndex, setSecondIndex] = useState(2);
   
-  const [firstPage, setFirstPage] = useState(chapter[firstIndex]);
-  const [secondPage, setSecondPage] = useState(chapter[secondIndex]);
+  const [firstPage, setFirstPage] = useState(chapterPages[firstIndex]);
+  const [secondPage, setSecondPage] = useState(chapterPages[secondIndex]);
   
   const pageImgPath_1 = `${chapterFolder}/${firstPage}`
   const pageImgPath_2 = `${chapterFolder}/${secondPage}`
   
-  console.log("volumeNum:", volumeNum);
-  console.log("chapterNum:", chapterNum);
 
   // Check if volumes exist in the storyJSON
   if (!storyJSON.volumes || storyJSON.volumes.length === 0) {
@@ -32,45 +37,36 @@ export default function ComicViewer({volumeNum, chapterNum}) {
     return <p>No volumes found.</p>;
   }
   
-  // Validate volumeNum and chapterNum
-  const volumeIndex = volumeNum - 1;
-  const validVolume = storyJSON.volumes[volumeIndex];
   
   if (!validVolume) {
-    console.error(`Volume ${volumeNum} not found.`);
+    console.error(`Volume ${volume} not found.`);
     return <p>Volume not found</p>;
   }
   
-  const chapterSource = validVolume.chapters;
-  console.log("Chapter Source:", chapterSource);
-  
-  if (!chapterSource || chapterSource.length < chapterNum) {
-    console.error(`Chapter ${chapterNum} not found in Volume ${volumeNum}.`);
+  if (!chapterSource || chapterSource.length < chapter) {
+    console.error(`Chapter ${chapter} not found in Volume ${volume}.`);
     return <p>Chapter not found</p>;
   }
   
-  const chapter = chapterSource[chapterNum - 1].files;
-  console.log("Chapters:", chapter);
   
-  const chapterFolder = `/images/chapters/Chapter_${chapterNum}`;
   
   
   function handleNext(){
-    if (isFirstLastPage == true && firstIndex + 2 < chapter.length){
+    if (isFirstLastPage == true && firstIndex + 2 < chapterPages.length){
       setFirstLastPage(false)
       setFirstIndex(prevIndex => prevIndex + 1);
-      setFirstPage(chapter[firstIndex + 1]);
+      setFirstPage(chapterPages[firstIndex + 1]);
     }    
-    else if (firstIndex + 1 < chapter.length && secondIndex + 1 < chapter.length) {
+    else if (firstIndex + 1 < chapterPages.length && secondIndex + 1 < chapterPages.length) {
       setFirstIndex(prevIndex => prevIndex + 2);
       setSecondIndex(prevIndex => prevIndex + 2);
-      setFirstPage(chapter[firstIndex]);
-      setSecondPage(chapter[secondIndex]);
+      setFirstPage(chapterPages[firstIndex]);
+      setSecondPage(chapterPages[secondIndex]);
     }
-    else if (secondIndex + 2 >= chapter.length) {
+    else if (secondIndex + 2 >= chapterPages.length) {
       setFirstLastPage(true)
       setFirstIndex(prevIndex => prevIndex + 2);
-      setFirstPage(chapter[firstIndex]);
+      setFirstPage(chapterPages[firstIndex]);
     }
   }
 

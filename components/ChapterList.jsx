@@ -1,16 +1,11 @@
-import Chapter from "./Chapter"
-import storyJSON from "./zamir-reborn-info.json"
+import Chapter from './Chapter';
 
-
-export default function ChapterList({chapters}){
-    //console.log("Chapters:", chapters);
-    
-    return(
+export default function ChapterList({chapters}) {  
+    return (
         <ul>
             {chapters.map((chapter, index) => (
                 <Chapter key={index} {...chapter}/>
             ))}
         </ul>
-        
-    )
+    );
 }
