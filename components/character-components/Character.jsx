@@ -12,8 +12,8 @@ import { useState } from "react"
 
 export default function Character({name, MBTI, icon, image, bio}){
 
-    const imgPath = `/images/CharacterProfiles/${name}/${image}`
-    const iconPath = `/images/CharacterProfiles/${name}/${icon}`
+    const imgPath = `/images/character-profiles/${name}/${image}`
+    const iconPath = `/images/character-profiles/${name}/${icon}`
 
       
     const [isSelected, setIsSelected] = useState(false);

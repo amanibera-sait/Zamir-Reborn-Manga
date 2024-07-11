@@ -9,10 +9,8 @@ const Viewer = () => {
     const searchParams = useSearchParams();
     const volume = searchParams.get('volume');
     const chapter = searchParams.get('chapter');
-    const [comicData, setComicData] = useState(null);
 
     console.log(`${volume} & ${chapter}`)
-
     useEffect(() => {
         if (!volume, chapter){
             fetchComicData(volume, chapter)
@@ -22,7 +20,6 @@ const Viewer = () => {
     function fetchComicData(volume, chapter) {
         const data = storyJSON.volumes[volume - 1].chapters[chapter - 1].pages;
         console.log(`Data: ${data}}`);
-        setComicData(data);
     
         if (!volume || !chapter) {
             return <p>Loading...</p>;

@@ -17,7 +17,7 @@ export default function ComicViewer ({volume, chapter}) {
   const volumeIndex = volume - 1;
   const validVolume = storyJSON.volumes[volumeIndex];
   const chapterSource = validVolume.chapters;
-  const chapterPages= chapterSource[chapter - 1].files;
+  const chapterPages = chapterSource[chapter - 1].files;
   
   const [isFirstLastPage, setFirstLastPage] = useState(true);
   

@@ -3,15 +3,17 @@
 // - Add user system and login feature.
 
 
-import Heading from "@/components/Header";
+import BannerCarousel from "@/components/layout-components/BannerCarousel";
+import Heading from "@/components/layout-components/Header";
+import HomePage from "@/components/layout-components/HomePage";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-blue-800 min-h-screen flex justify-center">
-        <div className="bg-white w-full max-w-7xl p-8">
-          <Heading/>
-        </div>
+      <div className="bg-white w-full min-h-screen justify-center items-center">
+        <Heading/>
+        <BannerCarousel/>
+        <HomePage/>
       </div>
     </>
   );
