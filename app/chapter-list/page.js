@@ -2,7 +2,6 @@
 
 import Heading from "@/components/layout-components/Header";
 import Volume from "@/components/manga-components/Volume";
-import Chapter from "@/components/manga-components/Chapter"
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 

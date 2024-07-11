@@ -1,4 +1,4 @@
-import ChatracterList from "@/components/CharacterList";
+import ChatracterList from "@/components/character-components/CharacterList";
 import Heading from "@/components/layout-components/Header";
 
 export default function Page(){

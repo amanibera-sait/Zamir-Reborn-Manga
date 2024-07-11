@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from 'next/navigation';
-import ComicViewer from '@/components/ComicViewer';
+import ComicViewer from '@/components/reader-components/ComicViewer';
 import React, { useEffect, useState } from 'react';
 import storyJSON from '@/components/zamir-reborn-info.json'
 
