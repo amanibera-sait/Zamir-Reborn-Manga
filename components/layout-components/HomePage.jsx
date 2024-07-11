@@ -9,7 +9,7 @@ function HomePage() {
         <div className='flex flex-col justify-center items-center text-lg'> 
             
                 <div style={{width: '25%'}} className="drop-shadow-md flex-wrap-reverse">
-                    <Image src={"/images/logo/Logo-2024.webp"} layout='responsive' width={2480} height={3508}/>
+                    <Image src={"/images/logo/Logo-2024.webp"} layout='responsive' width={2480} height={3508} alt='Zamir Reborn Logo'/>
                 </div>
 
             <div className="flex flex-col w-1/2 rounded bg-gray-200 bg-auto m-4 p-6 drop-shadow-md">
@@ -27,7 +27,7 @@ function HomePage() {
             <div className="flex flex-row-reverse my-6 space-x-10 w-3/4">
                 <div style={{width: '50%'}} className="rounded bg-gray-200 bg-auto m-4 p-10 drop-shadow-md">
                     <Link href={`/chapter-list/chapter-viewer?volume=${1}&chapter=${1}`}>
-                        <Image src={"/images/covers/volume-1-cover.webp"} layout='responsive' width={2480} height={3508} className='hover:opacity-75 active:opacity-50 '/>
+                        <Image src={"/images/covers/volume-1-cover.webp"} alt='Zamir Reborn Volume 1 Cover' layout='responsive' width={2480} height={3508} className='hover:opacity-75 active:opacity-50 '/>
                         <button className=" flex justify-center items-center rounded p-3 my-10 w-full bg-gray-400 font-bold text-gray-900 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200">Start Reading</button>
                     </Link>
                 </div>
