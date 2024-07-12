@@ -1,9 +1,13 @@
-import Viewer from './viewer'
+"use client";
+
+
+import Viewer from './viewer';
+import React from 'react';
 
 export default function page() {
-    return (
+    return(
         <div>
-            <Viewer/>
+            <Viewer />
         </div>
     )
 }
