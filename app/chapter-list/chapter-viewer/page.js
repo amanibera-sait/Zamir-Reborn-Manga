@@ -1,13 +1,13 @@
 "use client";
 
-
-import Viewer from './viewer';
+import { Suspense } from 'react';
+import Viewer from '@/components/reader-components/ViewerContent';
 import React from 'react';
 
 export default function page() {
     return(
-        <div>
+        <Suspense fallback={<div>Loading...</div>}>
             <Viewer />
-        </div>
+        </Suspense>
     )
 }
