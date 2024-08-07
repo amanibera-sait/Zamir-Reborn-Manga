@@ -6,11 +6,7 @@ function HomePage() {
   return (
     <div className='my-5'>
         
-        <div className='flex flex-col justify-center items-center text-lg'> 
-            
-                <div style={{width: '25%'}} className="drop-shadow-md flex-wrap-reverse">
-                    <Image src={"/images/logo/Logo-2024.webp"} layout='responsive' width={2480} height={3508} alt='Zamir Reborn Logo'/>
-                </div>
+        <div className='flex flex-col justify-center items-center text-lg'>
 
             <div className="flex flex-col w-1/2 rounded bg-gray-200 bg-auto m-4 p-6 drop-shadow-md">
                 <p><b>Art and Story by:</b> {ZamirRebornJSON.author}</p>

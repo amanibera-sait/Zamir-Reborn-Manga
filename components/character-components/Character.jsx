@@ -38,7 +38,7 @@ export default function Character({name, MBTI, icon, image, bio}){
                     <Image src={imgPath} width={350} height={350} className="place-content-center m-2" alt={"Image of " + name}/>
                     <p className=" text-center font-black text-3xl m-2">{name}</p>
                     <p className="text-center font-semibold italic text-2xl m-2">{MBTI}</p>
-                    <div className="text-left m-2">
+                    <div className="text-left m-2 max-h-72 overflow-y-auto">
                         {bio}
                     </div>
                 </div>
