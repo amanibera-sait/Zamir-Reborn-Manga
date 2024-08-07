@@ -4,6 +4,7 @@
 
 
 import BannerCarousel from "@/components/layout-components/BannerCarousel";
+import Footing from "@/components/layout-components/Footer";
 import Heading from "@/components/layout-components/Header";
 import HomePage from "@/components/layout-components/HomePage";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <Heading/>
         <BannerCarousel/>
         <HomePage/>
+        <Footing/>
       </div>
     </>
   );

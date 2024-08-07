@@ -1,7 +1,9 @@
 "use client"
 
+import Footing from "@/components/layout-components/Footer";
 import Heading from "@/components/layout-components/Header";
 import Volume from "@/components/manga-components/Volume";
+import VolumeList from "@/components/manga-components/VolumeList";
 
 export default function Page() {
 
@@ -10,8 +12,8 @@ export default function Page() {
     <>
         <main className="bg-white w-full min-h-screen justify-center items-center">
           <Heading/>
-          <h2>Zamir Reborn</h2>
-          <Volume volumeNum={1}/>
+          <VolumeList/>
+          <Footing/>
         </main>
     </>
   );
