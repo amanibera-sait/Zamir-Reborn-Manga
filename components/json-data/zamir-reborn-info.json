@@ -1,22 +1,22 @@
 {
   "storyTitle": "Zamir Reborn",
   "author": "Majudu",
-  "genre": ["Fantasy", "Action", "Adventure", "Magic", "Time Travel"],
+  "genre": "Fantasy, Action, Adventure, Magic, Time Travel",
   "releaseDate": "2023-07-14",
   "coverArt": "cover_art_zamir_reborn.jpg",
   "synopsis": "What if you could rewrite your past mistakes and start a new future? In a world where magic determines your worth, Adriel Zamir, once the scum of the earth, goes back to the past to his powerless childhood, with a desire for vengeance against those who have wronged him back then. Yet, as an opportunity for a new path in life emerges, Adriel is left with a question lingering in his mind, one that his past trauma holds him back from answering.",
   "volumes": [
     {
       "volume": 1,
-      "volumeCover": "volume1_cover.jpg",
+      "volumeCover": "volume1-cover.jpg",
       "chapters": [
         {
           "chapter": 1,
           "volume": 1,
           "title": "No Potential",
-          "icon": "Chapter_1_icon.jpg",
+          "icon": "Chapter_1_Icon.jpg",
           "releaseDate": "2023-07-28",
-          "files": ["Chapter_1_001.jpg", "Chapter_1_002.jpg", "Chapter_1_003.jpg", "Chapter_1_004.jpg", "Chapter_1_005.jpg", "Chapter_1_006.jpg", "Chapter_1_007.jpg", "Chapter_1_008.jpg", "Chapter_1_009.jpg", "Chapter_1_010.jpg", "Chapter_1_011.jpg", "Chapter_1_012.jpg", "Chapter_1_013.jpg", "Chapter_1_014.jpg", "Chapter_1_015.jpg", "Chapter_1_016.jpg", "Chapter_1_017.jpg", "Chapter_1_018.jpg", "Chapter_1_019.jpg", "Chapter_1_020.jpg", "Chapter_1_021.jpg", "Chapter_1_022.jpg", "Chapter_1_023.jpg", "Chapter_1_024.jpg", "Chapter_1_025.jpg", "Chapter_1_026.jpg", "Chapter_1_027.jpg", "Chapter_1_028.jpg", "Chapter_1_029.jpg", "Chapter_1_030.jpg", "Chapter_1_031.jpg", "Chapter_1_032.jpg", "Chapter_1_033.jpg", "Chapter_1_034.jpg", "Chapter_1_035.jpg", "Chapter_1_036.jpg", "Chapter_1_037.jpg"],
+          "pages": 37,
           "likes": 0,
           "comments": []
         },
@@ -24,9 +24,9 @@
           "chapter": 2,
           "volume": 1,
           "title": "Null",
-          "icon": "Chapter_2_icon.jpg",
+          "icon": "Chapter_2_Icon.jpg",
           "releaseDate": "2023-08-11",
-          "files": ["Chapter_2_001.jpg", "Chapter_2_002.jpg", "Chapter_2_003.jpg", "Chapter_2_004.jpg", "Chapter_2_005.jpg", "Chapter_2_006.jpg", "Chapter_2_007.jpg", "Chapter_2_008.jpg", "Chapter_2_009.jpg", "Chapter_2_010.jpg", "Chapter_2_011.jpg", "Chapter_2_012.jpg", "Chapter_2_013.jpg", "Chapter_2_014.jpg", "Chapter_2_015.jpg", "Chapter_2_016.jpg", "Chapter_2_017.jpg", "Chapter_2_018.jpg"],
+          "pages": 18,
           "likes": 0,
           "comments": []
         },
@@ -34,9 +34,9 @@
           "chapter": 3,
           "volume": 1,
           "title": "Anything for Power",
-          "icon": "Chapter_3_icon.jpg",
+          "icon": "Chapter_3_Icon.jpg",
           "releaseDate": "2023-08-25",
-          "files": ["Chapter_3_001.jpg", "Chapter_3_002.jpg", "Chapter_3_003.jpg", "Chapter_3_004.jpg", "Chapter_3_005.jpg", "Chapter_3_006.jpg", "Chapter_3_007.jpg", "Chapter_3_008.jpg", "Chapter_3_009.jpg", "Chapter_3_010.jpg", "Chapter_3_011.jpg", "Chapter_3_012.jpg", "Chapter_3_013.jpg", "Chapter_3_014.jpg", "Chapter_3_015.jpg", "Chapter_3_016.jpg", "Chapter_3_017.jpg", "Chapter_3_018.jpg", "Chapter_3_019.jpg", "Chapter_3_020.jpg"],
+          "pages": 20,
           "likes": 0,
           "comments": []
         },
@@ -44,9 +44,9 @@
           "chapter": 4,
           "volume": 1,
           "title": "Memories Resurfaced",
-          "icon": "Chapter_4_icon.jpg",
+          "icon": "Chapter_4_Icon.jpg",
           "releaseDate": "2023-09-08",
-          "files": ["Chapter_4_001.jpg", "Chapter_4_002.jpg", "Chapter_4_003.jpg", "Chapter_4_004.jpg", "Chapter_4_005.jpg", "Chapter_4_006.jpg", "Chapter_4_007.jpg", "Chapter_4_008.jpg", "Chapter_4_009.jpg", "Chapter_4_010.jpg", "Chapter_4_011.jpg", "Chapter_4_012.jpg", "Chapter_4_013.jpg", "Chapter_4_014.jpg", "Chapter_4_015.jpg", "Chapter_4_016.jpg", "Chapter_4_017.jpg", "Chapter_4_018.jpg", "Chapter_4_019.jpg", "Chapter_4_020.jpg", "Chapter_4_021.jpg", "Chapter_4_022.jpg"],
+          "pages": 22,
           "likes": 0,
           "comments": []
         },
@@ -54,13 +54,69 @@
           "chapter": 5,
           "volume": 1,
           "title": "Rebellion",
-          "icon": "Chapter_5_icon.jpg",
+          "icon": "Chapter_5_Icon.jpg",
           "releaseDate": "2023-09-24",
-          "files": ["Chapter_5_001.jpg", "Chapter_5_002.jpg", "Chapter_5_003.jpg", "Chapter_5_004.jpg", "Chapter_5_005.jpg", "Chapter_5_006.jpg", "Chapter_5_007.jpg", "Chapter_5_008.jpg", "Chapter_5_009.jpg", "Chapter_5_010.jpg", "Chapter_5_011.jpg", "Chapter_5_012.jpg", "Chapter_5_013.jpg", "Chapter_5_014.jpg", "Chapter_5_015.jpg", "Chapter_5_016.jpg", "Chapter_5_017.jpg", "Chapter_5_018.jpg", "Chapter_5_019.jpg", "Chapter_5_020.jpg", "Chapter_5_021.jpg", "Chapter_5_022.jpg", "Chapter_5_023.jpg"],
+          "pages": 23,
+          "likes": 0,
+          "comments": []
+        },
+        {
+          "chapter": 6,
+          "volume": 1,
+          "title": "Cooperate",
+          "icon": "Chapter_6_Icon.jpg",
+          "releaseDate": "2023-10-24",
+          "pages": 18,
+          "likes": 0,
+          "comments": []
+        },
+        {
+          "chapter": 7,
+          "volume": 1,
+          "title": "The Symbol",
+          "icon": "Chapter_7_Icon.jpg",
+          "releaseDate": "2023-11-24",
+          "pages": 20,
+          "likes": 0,
+          "comments": []
+        },
+        {
+          "chapter": 8,
+          "volume": 1,
+          "title": "Putting it Aside",
+          "icon": "Chapter_8_Icon.jpg",
+          "releaseDate": "2023-12-24",
+          "pages": 27,
           "likes": 0,
           "comments": []
         }
       ]
-    }  
+    },
+    {
+    "volume": 2,
+      "volumeCover": "volume2-cover.jpg",
+      "chapters": [
+        {
+          "chapter": 9,
+          "volume": 2,
+          "title": "My Reason",
+          "icon": "Chapter_9_Icon.jpg",
+          "releaseDate": "2024-01-28",
+          "pages": 20,
+          "likes": 0,
+          "comments": []
+        },
+        {
+          "chapter": 10,
+          "volume": 2,
+          "title": "Gate to Torah",
+          "icon": "Chapter_10_Icon.jpg",
+          "releaseDate": "2024-06-11",
+          "pages": 20,
+          "likes": 0,
+          "comments": []
+        }
+      ]
+    }
   ]
 }
