@@ -7,11 +7,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <html lang="en">
-        <SetChapterTitle/>
-        <body className={inter.className}>{children}</body>
-      </html>
-    </Suspense>
+    <html lang="en">
+        <body className={inter.className}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SetChapterTitle/>
+          {children}
+        </Suspense>
+          </body>
+    </html>
   );
 }
