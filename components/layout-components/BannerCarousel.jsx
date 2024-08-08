@@ -10,13 +10,16 @@ const BannerCarousel = () => {
         { src: "/images/banners/banner-2.jpg", alt: "Banner 2" },
         { src: "/images/banners/banner-3.jpg", alt: "Banner 3" },
         { src: "/images/banners/banner-4.jpg", alt: "Banner 4" },
+        { src: "/images/banners/banner-5.jpg", alt: "Banner 5" },
+        { src: "/images/banners/banner-6.jpg", alt: "Banner 6" },
+        { src: "/images/banners/banner-7.jpg", alt: "Banner 7" },
     ];
 
     return (
-        <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} interval={20000}>
+        <Carousel showThumbs={true} emulateTouch={false} autoPlay={true} infiniteLoop={true} interval={5000}>
             {banners.map((banner, index) => (
-                <div key={index} className="flex justify-center items-center bg-gray-200 py-10 w-full mb-10 drop-shadow-md">
-                <div className="relative w-full" style={{width: '50%', maxWidth: '1920px', height: 'auto' }}>
+                <div key={index} className="flex justify-center items-center p-4 mb-24 drop-shadow-md">
+                <div className="relative w-full" style={{width: '90%', height: 'auto' }}>
                     <Image
                         src={banner.src} 
                         alt={banner.alt} 

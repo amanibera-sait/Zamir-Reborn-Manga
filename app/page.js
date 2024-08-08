@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <div className="bg-white w-full min-h-screen justify-center items-center">
         <Heading/>
-        <BannerCarousel/>
         <HomePage/>
         <Footing/>
       </div>
