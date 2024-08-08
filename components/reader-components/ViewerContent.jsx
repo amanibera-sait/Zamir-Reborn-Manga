@@ -31,7 +31,6 @@ const Viewer = () => {
 
     return (
         <div>
-            <h1>Chapter Viewer</h1>
             {/* Render ComicViewer with fetched volume and chapter */}
             <ComicViewer volume={volume} chapter={chapter}/>
         </div>

@@ -9,8 +9,9 @@ import Heading from '@/components/layout-components/Header';
 export default function page() {
     return(
         <Suspense fallback={<div>Loading...</div>}>
-            <Heading/>
-            <Viewer />
+            <div className='my-12'>
+                <Viewer />
+            </div>
             <Footing/>
         </Suspense>
     )
