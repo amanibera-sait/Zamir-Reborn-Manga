@@ -26,7 +26,7 @@ const Viewer = () => {
     }
 
     if (loading) {
-        return <p className='flex justify-center items-center text-xl font bold'>Loading...</p>;
+        return <p className='flex m-72 justify-center items-center text-xl font bold'>Loading...</p>;
     }
 
     return (
