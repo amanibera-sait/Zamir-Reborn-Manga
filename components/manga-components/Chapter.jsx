@@ -1,5 +1,4 @@
-//TODO
-// - Add Icon images to folder.
+
 "use client"
 
 import Image from "next/image";
