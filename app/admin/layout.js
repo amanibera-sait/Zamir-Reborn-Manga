@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
 import SetHeadDescription from "@/components/layout-components/SetHeadDescription";
 import { Suspense } from "react";
 

@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import storyJSON from '@/components/json-data/zamir-reborn-info.json';
+import storyJSON from "@/components/json-data/zamir-reborn-info.json";
 import Image from "next/image";
 import ComicFilter from "./ComicFilter";
-import Loading from 'react-loading'
+import Loading from "react-loading";
 
 export default function ComicViewer({ volume, chapter }) {
   const chapterFolder = `/images/chapters/Volume_${volume}/Chapter_${chapter}`;
@@ -25,7 +25,10 @@ export default function ComicViewer({ volume, chapter }) {
     }
   }
 
-  const chapterSource = useMemo(() =>  ComicFilter(volume, chapter), [volume, chapter])
+  const chapterSource = useMemo(
+    () => ComicFilter(volume, chapter),
+    [volume, chapter]
+  );
   const [chapterPages, setChapterPages] = useState([]);
   const [firstIndex, setFirstIndex] = useState(0);
   const [firstPage, setFirstPage] = useState("");
@@ -64,37 +67,39 @@ export default function ComicViewer({ volume, chapter }) {
     <>
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-500">
-          <Loading type="spin" height={'10%'} width={'10%'} color="#deb018"/>
+          <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
         </div>
       )}
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
         <div className="flex flex-col justify-center items-center w-full max-w-9xl space-x-4">
           <div className="flex justify-center items-center w-full max-w-4xl">
             <Image
-              onClick={handleNext} 
+              onClick={handleNext}
               src={`${chapterFolder}/${firstPage}`}
               quality={1}
-              onLoadingComplete={() => setLoading(false)} 
-              priority={true} 
+              onLoadingComplete={() => setLoading(false)}
+              priority={true}
               layout="intrinsic"
-              width={2268} 
-              height={3154} 
-              className="active:opacity-90 mb-12 p-2 max-w-full h-auto rounded-lg bg-slate-900 drop-shadow-white-sm" 
-              alt={"Image of " + firstPage} 
+              width={2268}
+              height={3154}
+              className="active:opacity-90 mb-12 p-2 max-w-full h-auto rounded-lg bg-slate-900 drop-shadow-white-sm"
+              alt={"Image of " + firstPage}
             />
           </div>
           <div className="flex flex-row-reverse justify-center items-center w-1/4">
-            {(firstIndex > 0) && (
-              <button 
-                onClick={handleBack} 
-                className="rounded-lg p-4 w-1/2 ml-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200">
+            {firstIndex > 0 && (
+              <button
+                onClick={handleBack}
+                className="rounded-lg p-4 w-1/2 ml-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200"
+              >
                 &raquo;
               </button>
             )}
-            {(firstIndex < chapterPages.length - 1) && (
-              <button 
-                onClick={handleNext} 
-                className="rounded-lg p-4 w-1/2 mr-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200">
+            {firstIndex < chapterPages.length - 1 && (
+              <button
+                onClick={handleNext}
+                className="rounded-lg p-4 w-1/2 mr-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200"
+              >
                 &laquo;
               </button>
             )}

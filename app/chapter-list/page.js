@@ -2,7 +2,6 @@
 
 import Footing from "@/components/layout-components/Footer";
 import Heading from "@/components/layout-components/Header";
-import Volume from "@/components/manga-components/Volume";
 import VolumeList from "@/components/manga-components/VolumeList";
 
 export default function Page() {
