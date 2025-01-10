@@ -1,13 +1,18 @@
-import Volume from "./Volume";
-import storyJSON from "@/components/json-data/zamir-reborn-info.json";
 
-export default function VolumeList() {
-  const volumes = storyJSON.volumes;
 
+function checkBox(number) {
+  return (
+    <div className='p-8 text-l bg-slate-500'>{number}</div>
+  )
+}
+
+
+export default function VolumeList({volumes}) {
+  
   return (
     <ul className="my-24">
       {volumes.map((volume, index) => (
-        <Volume key={index} volumeNum={index + 1} volume={volume} />
+        <checkBox key={index} number={volume} />
       ))}
     </ul>
   );

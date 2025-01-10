@@ -7,26 +7,10 @@ const Chapter = ({
   chapter,
   volume,
   title,
-  icon,
-  releaseDate,
   pages,
-  likes,
-  handleEdit,
-  handleDelete,
 }) => {
+  const icon = `Chapter_${chapter}_Icon.jpg`
   const imgPath = `/images/chapters/Volume_${volume}/Icons/${icon}`;
-
-  /*function handleOption(value, chapterInput) {
-    console.log("Values are: " + value + " and " + chapterInput);
-    
-    if (value == "edit") {
-      console.log("Edit clicked");
-      handleEdit(chapterInput);
-    } else if (value == "delete") {
-      console.log("Delete clicked");
-      handleDelete(chapterInput); 
-    }
-  }*/
 
   return (
     <>
@@ -48,12 +32,9 @@ const Chapter = ({
               <p className="font-black text-lg sm:text-2xl mb-2 sm:mb-4 whitespace-nowrap">
                 Chapter {chapter} - {title}
               </p>
-              <p className="text-base sm:text-lg italic whitespace-nowrap">
+              {/*<p className="text-base sm:text-lg italic whitespace-nowrap">
                 {releaseDate}
-              </p>
-              <p className="text-sm sm:text-base italic whitespace-nowrap">
-                {likes} Likes
-              </p>
+              </p>*/}
             </div>
           </div>
         </Link>

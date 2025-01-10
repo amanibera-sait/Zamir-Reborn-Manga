@@ -6,6 +6,8 @@ import { useSearchParams } from "next/navigation";
 import ComicViewer from "./ComicViewer";
 import React, { useEffect, useState } from "react";
 import storyJSON from "@/components/json-data/zamir-reborn-info.json";
+import { getChapters } from "@/app/_utils/chapterDB";
+import MangaReader from "./MangaReader";
 
 const Viewer = () => {
   const searchParams = useSearchParams();
@@ -14,29 +16,18 @@ const Viewer = () => {
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (volume && chapter) {
-      fetchComicData(volume, chapter);
-    }
-  }, [volume, chapter]);
-
-  function fetchComicData(volume, chapter) {
-    const data = storyJSON.volumes[volume - 1].chapters[chapter - 1] || [];
-    setLoading(false);
-  }
-
-  if (loading) {
+  /*if (loading) {
     return (
       <p className="flex m-72 justify-center items-center text-xl font bold">
         Loading...
       </p>
     );
-  }
+  }*/
 
   return (
     <div>
       {/* Render ComicViewer with fetched volume and chapter */}
-      <ComicViewer volume={volume} chapter={chapter} />
+      <MangaReader volume={volume} chapter={chapter} />
     </div>
   );
 };

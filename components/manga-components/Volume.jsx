@@ -2,16 +2,35 @@
 
 import Image from "next/image";
 import ChapterList from "./ChapterList";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Loading from "react-loading";
+import { getChapters } from "@/app/_utils/chapterDB";
 
-export default function Volume({ volumeNum, volume }) {
-  if (!volume) {
-    console.error(`Volume ${volumeNum} not found in story JSON.`);
+export default function Volume({ volumeNum }) {
+  /*if (!volume) {
+    console.error(`Volume ${volumeNum} not found in database.`);
     return null;
-  }
+  }*/
+  const [chapters, setChapters] = useState([]); // State to store chapter data
+  const [isLoading, setIsLoading] = useState(true); // State to handle loading status
 
-  const chapters = volume.chapters || [];
+  const fetchChapters = async () => {
+    try {
+      const fetchedChapters = await getChapters(volumeNum); // Wait for data
+      setChapters(fetchedChapters); // Update the state
+    } catch (error) {
+      console.error("Error fetching chapters:", error);
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
+  };
+
+  useEffect(() => {
+    // Guard: Fetch chapters only if not already fetched
+    if (chapters.length === 0) {
+      fetchChapters();
+    }
+  }, [chapters, volumeNum]); // Dependencies ensure it only re-runs if `volumeNum` or `chapters` changes
 
   return (
     <div className="p-4 md:p-6 lg:p-8 lg:-mb-72 lg:-space-y-36">

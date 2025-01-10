@@ -10,7 +10,7 @@ export default function ComicFilter(volume, chapterNumber) {
 
   const chapters = validVolume.chapters;
 
-  console.log(chapters);
+  //console.log(chapters);
 
   function FindChapterIndex() {
     for (let index = 0; index < chapters.length; index++) {
@@ -24,7 +24,7 @@ export default function ComicFilter(volume, chapterNumber) {
 
   //const comicChapter = chapters.filter((obj) => obj.title === title);
 
-  console.log(comicChapter);
+  //console.log(comicChapter);
 
   return comicChapter;
 }
