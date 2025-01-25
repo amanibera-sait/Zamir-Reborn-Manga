@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense } from 'react';
-import Viewer from '@/components/reader-components/ViewerContent';
+import Reader from '@/components/reader-components/ViewerContent';
 import React from 'react';
 import Footing from '@/components/layout-components/Footer';
 import Heading from '@/components/layout-components/Header';
@@ -16,7 +16,7 @@ export default function page() {
             <div className="bg-black w-full min-h-screen justify-center items-center">
                 <Heading/>
                 <div className='mb-24'>
-                    <Viewer />
+                    <Reader />
                 </div>
                 <Footing/>
             </div>

@@ -19,7 +19,7 @@ function HomePage() {
               <div className="w-full md:w-1/2 rounded bg-gray-200 bg-auto m-4 p-4 md:p-10 drop-shadow-md">
                 <Link href={`/chapter-list/chapter-viewer?volume=${1}&chapter=${1}`}>
                   <Image 
-                    src={"/images/covers/volume-1-cover.webp"} 
+                    src={"/images/covers/volume-1-cover.jpg"} 
                     alt='Zamir Reborn Volume 1 Cover' 
                     layout='responsive' 
                     width={2480} 
