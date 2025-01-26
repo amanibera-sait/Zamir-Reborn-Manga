@@ -41,7 +41,6 @@ export default function Page() {
 
   return (
     <>
-<<<<<<< HEAD
         <Heading />
         <div className="bg-gradient-to-b from-blue-100 to-blue-300 min-h-screen flex flex-col items-center">
             {/* Admin Section Header */}
@@ -98,30 +97,4 @@ export default function Page() {
     </>
 );
 
-=======
-      <div className="bg-white w-full min-h-screen justify-center items-center">
-        <Heading />
-        <Link href={`/admin/upload`}>
-          <button className="flex justify-center items-center rounded p-3 my-4 md:my-10 w-full bg-gray-400 font-bold text-gray-900 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200">
-            Add Chapter
-          </button>
-        </Link>
-        <div className="flex justify-center items-center">
-          <ul className="bg-slate-300 rounded-lg overflow-y-auto sm:overflow-y-scroll md:overflow-y-scroll h-2/4 my-28">
-            {chapterList.map((chapter, index) => (
-              <Chapter
-                key={index}
-                {...chapter}
-                admin={true}
-                handleDelete={handleDelete}
-                handleEdit={handleEdit}
-              />
-            ))}
-          </ul>
-        </div>
-        <Footing />
-      </div>
-    </>
-  );
->>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
 }

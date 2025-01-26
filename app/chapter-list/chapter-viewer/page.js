@@ -15,11 +15,7 @@ export default function page() {
             </div>}>
             <div className="bg-neutral-900 w-full min-h-screen justify-center items-center">
                 <Heading/>
-<<<<<<< HEAD
                 <div>
-=======
-                <div className='mb-24'>
->>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
                     <Reader />
                 </div>
                 <Footing/>
