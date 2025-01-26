@@ -13,9 +13,9 @@ export default function page() {
             fallback={<div className='flex m-72 justify-center items-center text-xl font bold'>
             <Loading type="spin" height={'10%'} width={'10%'} color="#deb018"/>
             </div>}>
-            <div className="bg-black w-full min-h-screen justify-center items-center">
+            <div className="bg-neutral-900 w-full min-h-screen justify-center items-center">
                 <Heading/>
-                <div className='mb-24'>
+                <div>
                     <Reader />
                 </div>
                 <Footing/>

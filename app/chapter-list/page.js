@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Footing from "@/components/layout-components/Footer";
 import Heading from "@/components/layout-components/Header";
@@ -11,22 +11,18 @@ export default function Page() {
   const [volumeNum, setVolumeNum] = useState(1);
 
   let amount = getChapterSize();
-  let nums = []
+  let nums = [];
   for (let i = 1; i < amount; i++) {
-    nums.push(i)
-    
+    nums.push(i);
   }
 
-
-  
   return (
     <>
-        <main className="bg-white w-full min-h-screen justify-center items-center">
-          <Heading/>
-          <VolumeList volumes={nums}/>
-          <Volume volumeNum={volumeNum}/>
-          <Footing/>
-        </main>
+      <Heading />
+      <main className="bg-white min-h-screen flex flex-col justify-center items-center">
+        <Volume volumeNum={volumeNum} />
+      </main>
+      <Footing />
     </>
   );
 }

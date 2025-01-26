@@ -76,46 +76,35 @@ function MangaReader({ volume, chapter }) {
     return (
       <>
         {loading && (
-          <div className="fixed inset-0 flex justify-center items-center h-screen transition-opacity duration-500">
+          <div className="fixed inset-0 flex justify-center items-center h-screen bg-black bg-opacity-75">
             <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
           </div>
         )}
-        <div className="flex flex-col justify-start m-20">
-          <button
-            onClick={handleExitToList}
-            className="rounded-lg p-8 w-8 h-8 mr-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200"
-          >
-            List
-          </button>
-          <PageCarousel
-            handleNextChapter={handleNextChapter}
-            handlePreviousChapter={handlePreviousChapter}
-            handleExit={handleExit}
-            handleExitToList={handleExitToList}
-          >
-            {pages.map((page, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center p-4 mb-4 drop-shadow-md sm:p-4 sm:mb-2"
+        <div className="w-full lg:w-2/4 mx-auto my-12">
+          <div className="bg-gray-900 border border-gray-800 rounded-lg shadow-lg">
+            <div className="p-4 flex justify-end">
+              <button
+                onClick={handleExitToList}
+                className="rounded-lg px-4 py-2 text-sm font-bold bg-gray-700 text-white hover:bg-gray-600 active:bg-gray-800 transition"
               >
-                <div
-                  className="relative w-full"
-                  style={{ width: "50%", height: "auto" }}
-                >
-                  <Image
-                    src={page.src}
-                    alt={page.alt}
-                    quality={1}
-                    priority={true}
-                    layout="intrinsic"
-                    width={1920}
-                    height={1080}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </PageCarousel>
+                Back to List
+              </button>
+            </div>
+            <PageCarousel
+              handleNextChapter={handleNextChapter}
+              handlePreviousChapter={handlePreviousChapter}
+              handleExit={handleExit}
+              handleExitToList={handleExitToList}
+              loading={loading}
+              setLoading={setLoading}
+            >
+              {pages.map((page, index) => (
+                <>
+                  <img key={page.src} src={page.src} alt={page.alt} />
+                </>
+              ))}
+            </PageCarousel>
+          </div>
         </div>
       </>
     );
