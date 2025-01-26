@@ -76,6 +76,7 @@ function MangaReader({ volume, chapter }) {
     return (
       <>
         {loading && (
+<<<<<<< HEAD
           <div className="fixed inset-0 flex justify-center items-center h-screen bg-black bg-opacity-75">
             <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
           </div>
@@ -105,6 +106,48 @@ function MangaReader({ volume, chapter }) {
               ))}
             </PageCarousel>
           </div>
+=======
+          <div className="fixed inset-0 flex justify-center items-center h-screen transition-opacity duration-500">
+            <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
+          </div>
+        )}
+        <div className="flex flex-col justify-start m-20">
+          <button
+            onClick={handleExitToList}
+            className="rounded-lg p-8 w-8 h-8 mr-8 flex justify-center items-center text-2xl font-black bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-gray-100 active:bg-gray-200"
+          >
+            List
+          </button>
+          <PageCarousel
+            handleNextChapter={handleNextChapter}
+            handlePreviousChapter={handlePreviousChapter}
+            handleExit={handleExit}
+            handleExitToList={handleExitToList}
+          >
+            {pages.map((page, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center p-4 mb-4 drop-shadow-md sm:p-4 sm:mb-2"
+              >
+                <div
+                  className="relative w-full"
+                  style={{ width: "50%", height: "auto" }}
+                >
+                  <Image
+                    src={page.src}
+                    alt={page.alt}
+                    quality={1}
+                    priority={true}
+                    layout="intrinsic"
+                    width={1920}
+                    height={1080}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </PageCarousel>
+>>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
         </div>
       </>
     );
