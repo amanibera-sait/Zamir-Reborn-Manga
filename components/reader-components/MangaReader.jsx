@@ -76,6 +76,37 @@ function MangaReader({ volume, chapter }) {
     return (
       <>
         {loading && (
+<<<<<<< HEAD
+          <div className="fixed inset-0 flex justify-center items-center h-screen bg-black bg-opacity-75">
+            <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
+          </div>
+        )}
+        <div className="w-full lg:w-2/4 mx-auto my-12">
+          <div className="bg-gray-900 border border-gray-800 rounded-lg shadow-lg">
+            <div className="p-4 flex justify-end">
+              <button
+                onClick={handleExitToList}
+                className="rounded-lg px-4 py-2 text-sm font-bold bg-gray-700 text-white hover:bg-gray-600 active:bg-gray-800 transition"
+              >
+                Back to List
+              </button>
+            </div>
+            <PageCarousel
+              handleNextChapter={handleNextChapter}
+              handlePreviousChapter={handlePreviousChapter}
+              handleExit={handleExit}
+              handleExitToList={handleExitToList}
+              loading={loading}
+              setLoading={setLoading}
+            >
+              {pages.map((page, index) => (
+                <>
+                  <img key={page.src} src={page.src} alt={page.alt} />
+                </>
+              ))}
+            </PageCarousel>
+          </div>
+=======
           <div className="fixed inset-0 flex justify-center items-center h-screen transition-opacity duration-500">
             <Loading type="spin" height={"10%"} width={"10%"} color="#deb018" />
           </div>
@@ -116,6 +147,7 @@ function MangaReader({ volume, chapter }) {
               </div>
             ))}
           </PageCarousel>
+>>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
         </div>
       </>
     );

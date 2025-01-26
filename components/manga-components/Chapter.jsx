@@ -14,6 +14,26 @@ const Chapter = ({
 
   return (
     <>
+<<<<<<< HEAD
+      <li className="border border-gray-300 shadow-md flex flex-col sm:flex-row justify-center items-center p-4 max-w-screen-md mx-auto rounded-lg bg-white hover:shadow-lg transition-shadow duration-300">
+        <Link
+          href={`/chapter-list/chapter-viewer?volume=${volume}&chapter=${chapter}`}
+        >
+          <div className="flex flex-col sm:flex-row items-center w-full space-y-4 sm:space-x-4">
+            <div className="flex-shrink-0 overflow-hidden rounded-lg w-32 h-32">
+              <Image
+                src={imgPath}
+                alt={`Chapter ${chapter}`}
+                width={128}
+                height={128}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-start sm:ml-4 w-full">
+              <p className="font-semibold text-lg sm:text-xl text-gray-800 truncate">
+                Chapter {chapter}: {title}
+              </p>
+=======
       <li className="border-4 border-spacing-8 sm:flex-row justify-center items-center p-4 max-w-screen-sm mx-auto rounded-lg hover:bg-gray-400 hover:text-gray-100 active:bg-gray-500">
         <Link
           href={`/chapter-list/chapter-viewer?volume=${volume}&chapter=${chapter}`}
@@ -35,10 +55,13 @@ const Chapter = ({
               {/*<p className="text-base sm:text-lg italic whitespace-nowrap">
                 {releaseDate}
               </p>*/}
+>>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
             </div>
           </div>
         </Link>
       </li>
+<<<<<<< HEAD
+=======
       {/* <div className="flex-row justify-center items-center mb-4 space-x-8 space-y-4 text-end w-full">
         <button
           value={"edit"}
@@ -55,6 +78,7 @@ const Chapter = ({
           Delete
         </button>
       </div> */}
+>>>>>>> 0098b2c5dc6fd33347aaa0b0aca33e5cdfac386f
     </>
   );
 };
