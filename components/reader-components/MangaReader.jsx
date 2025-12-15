@@ -23,9 +23,9 @@ function MangaReader({ volume, chapter }) {
       try {
         const data = await getChapterData(volume, chapter);
         setChapterSource(data); // Set resolved data
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching chapter data:", error);
+      } finally {
         setLoading(false);
       }
     }

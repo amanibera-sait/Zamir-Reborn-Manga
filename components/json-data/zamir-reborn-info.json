@@ -91,32 +91,6 @@
           "comments": []
         }
       ]
-    },
-    {
-    "volume": 2,
-      "volumeCover": "volume2-cover.jpg",
-      "chapters": [
-        {
-          "chapter": 9,
-          "volume": 2,
-          "title": "My Reason",
-          "icon": "Chapter_9_Icon.jpg",
-          "releaseDate": "2024-01-28",
-          "pages": 20,
-          "likes": 0,
-          "comments": []
-        },
-        {
-          "chapter": 10,
-          "volume": 2,
-          "title": "Gate to Torah",
-          "icon": "Chapter_10_Icon.jpg",
-          "releaseDate": "2024-06-11",
-          "pages": 20,
-          "likes": 0,
-          "comments": []
-        }
-      ]
     }
   ]
 }

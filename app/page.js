@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Heading />
       <div className="bg-blue-50 min-h-screen flex flex-col items-center">
-        {/* Hero Section */}
         <BannerCarousel />
         <section className="bg-gradient-to-r from-blue-400 to-blue-600 text-white w-full py-20 flex flex-col items-center">
           <h1 className="text-4xl font-extrabold text-center p-4 mb-8">
@@ -41,11 +40,11 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
             Latest Chapter
           </h2>
-          <Link href={`/chapter-list/chapter-viewer?volume=1&chapter=2`}>
+          <Link href={`/chapter-list/chapter-viewer?volume=1&chapter=8`}>
             <div className="bg-gray-200 p-6 min-w-full md:w-1/2 text-center rounded-lg shadow-lg hover:bg-gray-300 transition-all">
               <Image
-                src="/images/chapters/Volume_1/Icons/Chapter_2_Icon.jpg"
-                alt="Chapter 2 Cover"
+                src="/images/chapters/Volume_1/Icons/Chapter_8_Icon.jpg"
+                alt="Chapter 8 Cover"
                 layout="responsive"
                 width={1280}
                 height={720}
@@ -84,27 +83,6 @@ export default function Home() {
                 className="rounded-lg shadow-lg"
               />
             </div>
-          </div>
-        </section>
-
-        {/* Comments or Likes Section (Placeholder for Future Implementation) */}
-        <section className="w-full py-12 bg-white flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Join the Conversation
-          </h2>
-          <p className="text-lg text-center max-w-3xl mb-6">
-            Share your thoughts about the latest chapter, or leave a comment to
-            interact with other readers.
-          </p>
-          <div className="w-full md:w-1/2 p-8">
-            <textarea
-              placeholder="Leave a comment..."
-              className="w-full p-4 bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-lg resize-none"
-              rows="4"
-            />
-            <button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-all">
-              Post Comment
-            </button>
           </div>
         </section>
       </div>

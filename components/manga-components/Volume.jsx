@@ -7,10 +7,6 @@ import Loading from "react-loading";
 import { getChapters } from "@/app/_utils/chapterDB";
 
 export default function Volume({ volumeNum }) {
-  /*if (!volume) {
-    console.error(`Volume ${volumeNum} not found in database.`);
-    return null;
-  }*/
   const [chapters, setChapters] = useState([]); // State to store chapter data
   const [isLoading, setIsLoading] = useState(true); // State to handle loading status
 
@@ -26,11 +22,8 @@ export default function Volume({ volumeNum }) {
   };
 
   useEffect(() => {
-    // Guard: Fetch chapters only if not already fetched
-    if (chapters.length === 0) {
-      fetchChapters();
-    }
-  }, [chapters, volumeNum]); // Dependencies ensure it only re-runs if `volumeNum` or `chapters` changes
+    fetchChapters();
+  }, [volumeNum]); // Re-fetch when volumeNum changes
 
   return (
     <div className="p-6 lg:p-8 bg-white rounded-xl shadow-lg space-y-6">
